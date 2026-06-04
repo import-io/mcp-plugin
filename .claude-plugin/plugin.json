@@ -1,0 +1,12 @@
+{
+  "name": "import-io-web-scraper",
+  "displayName": "Import.io Web Scraper",
+  "version": "0.1.0",
+  "description": "Claude Code plugin for the Import.io Chromium MCP web scraping server.",
+  "author": {
+    "name": "Import.io"
+  },
+  "license": "MIT",
+  "keywords": ["mcp", "web-scraping", "chromium", "browser-automation"],
+  "mcpServers": "./.mcp.json"
+}
