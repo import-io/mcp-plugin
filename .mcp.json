@@ -1,10 +1,10 @@
 {
   "mcpServers": {
     "import-io-web-scraper": {
-      "transport": "http",
+      "type": "http",
       "url": "http://127.0.0.1:9494/mcp",
       "headers": {
-        "X-Import-IO-API-Key": "${IMPORT_IO_API_KEY}"
+        "X-Import-IO-API-Key": "${user_config.importio_api_key}"
       }
     }
   }

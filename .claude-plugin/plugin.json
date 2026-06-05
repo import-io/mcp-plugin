@@ -1,12 +1,22 @@
 {
   "name": "import-io-web-scraper",
   "displayName": "Import.io Web Scraper",
-  "version": "0.1.0",
-  "description": "Claude Code plugin for the Import.io Chromium MCP web scraping server.",
+  "version": "0.2.0",
+  "description": "Claude Code plugin for the Import.io Web Scraper MCP server.",
   "author": {
     "name": "Import.io"
   },
   "license": "MIT",
-  "keywords": ["mcp", "web-scraping", "chromium", "browser-automation"],
-  "mcpServers": "./.mcp.json"
+  "keywords": ["mcp", "web-scraping", "importio", "browser-automation"],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "userConfig": {
+    "importio_api_key": {
+      "type": "string",
+      "title": "Import.io API key",
+      "description": "Your Import.io API key from https://app.import.io/dash/account/settings",
+      "sensitive": true,
+      "required": true
+    }
+  }
 }
