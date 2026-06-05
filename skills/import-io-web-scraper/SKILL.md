@@ -36,13 +36,13 @@ Before starting, check that the `mcp__import-io-web-scraper__*` tools are availa
 If the tools are missing:
 
 1. Tell the user that the Import.io MCP server is not connected.
-2. Ask them to run the local `importio-mcp` server and reload the plugin.
+2. Ask them to check that the plugin is installed, configured with an Import.io API key, and connected to the hosted MCP server.
 3. Do not silently complete a scraping task with a weaker browserless fallback unless the user explicitly asks for a fallback.
 
-The local server normally listens on:
+The hosted MCP server normally lives at:
 
 ```text
-http://127.0.0.1:9494/mcp
+https://mcp.import.io/mcp
 ```
 
 ## Tool Selection
@@ -95,7 +95,7 @@ For pagination:
 - Empty output: wait for selectors or loading, scroll if the page lazy-loads content, then retry extraction.
 - Wrong page state: capture HTML or a screenshot, then adjust actions.
 - Auth/API-key error: verify the plugin `importio_api_key` user config and the local server connection.
-- Connection refused: ask the user to start `importio-mcp`; do not pretend scraping succeeded.
+- Connection refused: ask the user to verify plugin connectivity to `https://mcp.import.io/mcp`; do not pretend scraping succeeded.
 - Tool timeout: reduce scope, split pagination into smaller batches, or stop the browser engine and restart the flow.
 
 ## Security

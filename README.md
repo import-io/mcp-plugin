@@ -5,12 +5,21 @@ Claude Code plugin that connects Claude to the Import.io Web Scraper MCP server.
 ## Prerequisites
 
 - Claude Code installed and authenticated.
-- The `importio-mcp` server binary built from `../mcp`.
 - An Import.io API key.
 
 Get an API key from <https://app.import.io/dash/account/settings>.
 
-## Run the MCP server
+## Hosted MCP server
+
+The plugin connects to the hosted Import.io MCP server:
+
+```text
+https://mcp.import.io/mcp
+```
+
+No local server required. Bring an API key and go scrape something useful. 🚀
+
+## Run the MCP server locally
 
 From the `mcp` repository:
 
@@ -19,7 +28,7 @@ go build -o importio-mcp
 ./importio-mcp
 ```
 
-The server listens on `http://127.0.0.1:9494/mcp` by default.
+For local development, the server listens on `http://127.0.0.1:9494/mcp` by default. Update `.mcp.json` to point at the local URL if you want to test against it.
 
 ## Test this plugin locally
 
@@ -37,8 +46,9 @@ This plugin includes an `import-io-web-scraper` skill that tells agents to use t
 
 ## Development notes
 
-- The plugin does not bundle the `importio-mcp` binary. Users must run the server separately.
-- The API key is stored as sensitive Claude plugin user config and passed to the local MCP server through the `X-Import-IO-API-Key` header.
+- The plugin uses the hosted Import.io MCP server by default.
+- The plugin does not bundle the `importio-mcp` binary. Developers can run the server separately for local testing.
+- The API key is stored as sensitive Claude plugin user config and passed to the MCP server through the `X-Import-IO-API-Key` header.
 - The MCP server also accepts `Authorization: Bearer <key>` and `/mcp?_apikey=<key>` as compatibility fallbacks.
 
 ## Marketplace submission
