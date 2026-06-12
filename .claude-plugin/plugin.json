@@ -1,7 +1,7 @@
 {
   "name": "import-io-web-scraper",
   "displayName": "Import.io Web Scraper",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Claude Code plugin for the Import.io Web Scraper MCP server.",
   "author": {
     "name": "Import.io"
@@ -11,10 +11,10 @@
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "userConfig": {
-    "importio_api_key": {
+    "mcp_api_key": {
       "type": "string",
-      "title": "Import.io API key",
-      "description": "Your Import.io API key from https://app.import.io/dash/account/settings",
+      "title": "Import.io MCP key",
+      "description": "Your mcp_live_... key from https://mcp.import.io/app/keys/new",
       "sensitive": true,
       "required": true
     }

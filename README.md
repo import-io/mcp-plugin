@@ -5,9 +5,9 @@ Claude Code plugin that connects Claude to the Import.io Web Scraper MCP server.
 ## Prerequisites
 
 - Claude Code installed and authenticated.
-- An Import.io API key.
+- An Import.io MCP key (`mcp_live_...`).
 
-Get an API key from <https://app.import.io/dash/account/settings>.
+Sign in at <https://mcp.import.io/login> and create an MCP key at <https://mcp.import.io/app/keys/new>.
 
 ## Hosted MCP server
 
@@ -17,7 +17,7 @@ The plugin connects to the hosted Import.io MCP server:
 https://mcp.import.io/mcp
 ```
 
-No local server required. Bring an API key and go scrape something useful. 🚀
+No local server required. Bring an MCP key and go scrape something useful.
 
 ## Run the MCP server locally
 
@@ -25,10 +25,10 @@ From the `mcp` repository:
 
 ```bash
 go build -o importio-mcp
-./importio-mcp
+IMPORTIO_API_KEY=your-upstream-key ./importio-mcp
 ```
 
-For local development, the server listens on `http://127.0.0.1:9494/mcp` by default. Update `.mcp.json` to point at the local URL if you want to test against it.
+For local development, the server listens on `http://127.0.0.1:9494/mcp` by default. The local server still needs its own upstream Import.io API key in `IMPORTIO_API_KEY`; clients should continue to authenticate with an MCP key. Update `.mcp.json` to point at the local URL if you want to test against it.
 
 ## Test this plugin locally
 
@@ -38,7 +38,7 @@ From any project where you want to use Claude Code:
 claude --plugin-dir /Users/smo/code/import-io/mcp-plugin
 ```
 
-Claude Code prompts for the plugin's `importio_api_key` user config. Enter the Import.io API key from your account settings, then check Claude Code's MCP tools list for `import-io-web-scraper`.
+Claude Code prompts for the plugin's `mcp_api_key` user config. Enter the `mcp_live_...` key from the Import.io MCP dashboard, then check Claude Code's MCP tools list for `import-io-web-scraper`.
 
 ## Agent guidance
 
@@ -48,8 +48,8 @@ This plugin includes an `import-io-web-scraper` skill that tells agents to use t
 
 - The plugin uses the hosted Import.io MCP server by default.
 - The plugin does not bundle the `importio-mcp` binary. Developers can run the server separately for local testing.
-- The API key is stored as sensitive Claude plugin user config and passed to the MCP server through the `X-Import-IO-API-Key` header.
-- The MCP server also accepts `Authorization: Bearer <key>` and `/mcp?_apikey=<key>` as compatibility fallbacks.
+- The MCP key is stored as sensitive Claude plugin user config and passed to the MCP server through `Authorization: Bearer mcp_live_...`.
+- The upstream Import.io API key is server-side infrastructure and is not sent by plugin clients.
 
 ## Marketplace submission
 

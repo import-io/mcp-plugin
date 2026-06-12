@@ -8,7 +8,7 @@ description: |
 license: MIT
 metadata:
   author: Import.io
-  version: 0.2.0
+  version: 0.2.1
   mcp-server: import-io-web-scraper
 ---
 
@@ -36,7 +36,7 @@ Before starting, check that the `mcp__import-io-web-scraper__*` tools are availa
 If the tools are missing:
 
 1. Tell the user that the Import.io MCP server is not connected.
-2. Ask them to check that the plugin is installed, configured with an Import.io API key, and connected to the hosted MCP server.
+2. Ask them to check that the plugin is installed, configured with an Import.io MCP key, and connected to the hosted MCP server.
 3. Do not silently complete a scraping task with a weaker browserless fallback unless the user explicitly asks for a fallback.
 
 The hosted MCP server normally lives at:
@@ -94,12 +94,12 @@ For pagination:
 
 - Empty output: wait for selectors or loading, scroll if the page lazy-loads content, then retry extraction.
 - Wrong page state: capture HTML or a screenshot, then adjust actions.
-- Auth/API-key error: verify the plugin `importio_api_key` user config and the local server connection.
+- Auth/API-key error: verify the plugin `mcp_api_key` user config contains an `mcp_live_...` key and that the MCP server connection is healthy.
 - Connection refused: ask the user to verify plugin connectivity to `https://mcp.import.io/mcp`; do not pretend scraping succeeded.
 - Tool timeout: reduce scope, split pagination into smaller batches, or stop the browser engine and restart the flow.
 
 ## Security
 
-- Do not expose the Import.io API key in responses, logs, generated files, URLs, or screenshots.
+- Do not expose Import.io MCP keys or upstream API keys in responses, logs, generated files, URLs, or screenshots.
 - Do not persist scraped personal data beyond what the user requested.
 - Do not bypass access controls or scrape pages the user is not authorized to access.
