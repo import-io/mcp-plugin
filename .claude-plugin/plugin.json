@@ -1,7 +1,7 @@
 {
   "name": "import-io-web-scraper",
   "displayName": "Import.io Web Scraper",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Claude Code plugin for the Import.io Web Scraper MCP server.",
   "author": {
     "name": "Import.io"

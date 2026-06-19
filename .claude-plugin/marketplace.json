@@ -5,14 +5,14 @@
   },
   "metadata": {
     "description": "Import.io Web Scraper plugin for Claude Code - browser-backed web scraping, automation, screenshots, HTML capture, and structured data extraction",
-    "version": "0.2.1"
+    "version": "0.2.2"
   },
   "plugins": [
     {
       "name": "import-io-web-scraper",
       "source": "./",
       "description": "Browser-backed web scraping and automation powered by Import.io. Provides MCP tools for JavaScript-rendered pages, form interaction, pagination, screenshots, HTML capture, asset fetching, and structured data extraction.",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "author": {
         "name": "Import.io"
       },
