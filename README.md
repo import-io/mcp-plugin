@@ -60,3 +60,32 @@ claude plugin validate /Users/smo/code/import-io/mcp-plugin
 ```
 
 After validation, submit through the Claude plugin submission flow described in the Claude Code plugin docs.
+
+## Gemini CLI extension (preview)
+
+This repository also contains the `import-io-web-scraper` Gemini CLI extension,
+version `0.2.3-rc.1`. It connects to the hosted MCP endpoint using Streamable
+HTTP and OAuth with the `mcp:tools` scope. This extension version is independent
+of the Claude Code plugin version and does not identify the server runtime.
+
+Install with Gemini CLI:
+
+```bash
+gemini extensions install https://github.com/import-io/mcp-plugin --ref master
+```
+
+Restart Gemini CLI, then use `/mcp auth import-io-web-scraper` to connect your
+Import.io account and `/mcp list` to inspect the available tools. Use Gemini's
+OAuth flow; do not place access tokens or API keys in this manifest.
+
+An Import.io account is required and service usage may be metered. The manifest
+requests no billing scopes, but it does not restrict the server's tool exposure
+or establish what the server authorizes under `mcp:tools`.
+
+Gemini installation and OAuth have not yet been tested end to end. The server
+must support Gemini's localhost OAuth callback and return an `iss` parameter
+matching `https://mcp.import.io`. Public OAuth discovery alone does not establish
+compatibility. No scraping or paid usage test is included in this release.
+
+This repository contains client configuration and agent guidance; it does not
+contain the hosted MCP server implementation.
