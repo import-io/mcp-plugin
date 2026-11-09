@@ -87,6 +87,11 @@ class PluginContractTests(unittest.TestCase):
         for path, digest in expected["unchanged_files"].items():
             self.assertEqual(hashlib.sha256((ROOT / path).read_bytes()).hexdigest(), digest, path)
 
+    def test_schema_snapshot_hash_matches_provenance(self):
+        provenance = json.loads((ROOT / "tests/fixtures/schema-source.json").read_text())
+        fixture = (ROOT / "tests/fixtures/antigravity-plugin.schema.json").read_bytes()
+        self.assertEqual(hashlib.sha256(fixture).hexdigest(), provenance["sha256"])
+
 
 class PackageTests(unittest.TestCase):
     def setUp(self):
