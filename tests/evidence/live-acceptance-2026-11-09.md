@@ -18,7 +18,8 @@ candidate in isolated throwaway profiles; not a publication.
 ## Environment
 
 - Antigravity CLI 1.5.3, Linux x86_64.
-- Antigravity App (Linux); version not recorded — capture before submission.
+- Antigravity App (Linux); version not recorded at test time — captured on
+  2026-11-09 as 44.5.1 (see `final-release-revalidation.md`).
 - Isolated temporary `HOME`/XDG profiles; no production profile used.
 - Authorized test-account MCP key entered through the Antigravity setup dialog.
   It was not written into the plugin package, chat, or this record. All test

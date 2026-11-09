@@ -27,6 +27,13 @@ release build" gate in `docs/ANTIGRAVITY-VALIDATION.md`.
 
 ## Status
 
-Offline and isolated checks are complete for the final build. Remaining before
-Marketplace submission: formal icon approval, App version capture, and Google
-partner intake confirmation.
+Offline and isolated checks are complete for the final build. Follow-up captures
+closed two of the three submission gates:
+
+- Listing icon approved 2026-11-09 (see `icon-approval-2026-11-09.md`).
+- App version captured 2026-11-09: **Antigravity App 44.5.1**, Linux x86_64
+  (`/opt/Antigravity/version`); verified alongside the production-profile
+  install, which registers the plugin at 0.3.0 with one command, one skill, and
+  one MCP server (`https://mcp.import.io/mcp`).
+
+Remaining before Marketplace submission: Google partner intake confirmation.
