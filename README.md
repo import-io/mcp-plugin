@@ -50,7 +50,10 @@ The Antigravity candidate and shared skill are version `0.3.0`; the unchanged
 Claude plugin and marketplace manifests remain version `0.2.2`.
 
 The original candidate's build evidence is retained in
-[docs/BUILD-RESULTS.md](docs/BUILD-RESULTS.md) and `tests/evidence/`.
+[docs/BUILD-RESULTS.md](docs/BUILD-RESULTS.md) and `tests/evidence/`. The
+final merged build was revalidated in
+[tests/evidence/final-release-revalidation.md](tests/evidence/final-release-revalidation.md)
+(SHA-256 `d767fbad…`).
 
 ## Claude Code
 
