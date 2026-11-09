@@ -1,0 +1,2 @@
+PASS: Antigravity manifest matches the official schema snapshot (2026-11-07).
+This offline check does not replace agy plugin validate --strict or live acceptance tests.

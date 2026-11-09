@@ -1,0 +1,18 @@
+{
+  "mcpServers": {
+    "import-io-web-scraper": {
+      "serverUrl": "https://mcp.import.io/mcp",
+      "headers": {
+        "Authorization": "Bearer ${IMPORTIO_MCP_API_KEY}"
+      },
+      "variables": [
+        {
+          "name": "IMPORTIO_MCP_API_KEY",
+          "title": "Import.io MCP key",
+          "description": "Your mcp_live_... key from the Import.io MCP dashboard. Use an MCP key, not the server-side upstream Import.io API key.",
+          "link": "https://mcp.import.io/app/keys/new"
+        }
+      ]
+    }
+  }
+}

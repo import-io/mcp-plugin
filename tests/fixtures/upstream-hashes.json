@@ -1,0 +1,11 @@
+{
+  "source": "https://github.com/import-io/mcp-plugin",
+  "commit": "b50a86e12b747ba95cb7df7c9d8142e7b8bf1f74",
+  "unchanged_files": {
+    ".claude-plugin/plugin.json": "81edf8a73f146c981cf795e751f5876f51698c1824de18f2817fd1362a15f149",
+    ".claude-plugin/marketplace.json": "157208fdfef0e00da60030e5a06e32ba80a0e980ea58d32d06f479d3ceca72ae",
+    ".mcp.json": "fe5d43e877f642869ab73e6bc13f159fc158535e4e19e748a3076bd3c3da20b9",
+    "scripts/setup.sh": "d3adc01b145216044be10332c826fd1779b091cde3e19937794fd0273d1cac68",
+    "LICENSE": "7997a86cad95b19702b6f9f5074405994d25fae1864c090f16a1621b42e19ef3"
+  }
+}

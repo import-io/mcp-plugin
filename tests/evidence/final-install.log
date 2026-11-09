@@ -1,0 +1,5 @@
+  [ok]    import-io-web-scraper
+          ✔ skills      : 1 installed (import-io-web-scraper)
+          ✔ mcpServers  : 1 installed (import-io-web-scraper)
+          Installed to <ISOLATED_WORKSPACE>/final-cli-home/.gemini/config/plugins/import-io-web-scraper
+It is disabled until its MCP servers are configured: open /plugin and turn it on to fill them in.

@@ -1,0 +1,24 @@
+test_archive_paths_and_content (test_antigravity.PackageTests.test_archive_paths_and_content) ... ok
+test_build_is_reproducible (test_antigravity.PackageTests.test_build_is_reproducible) ... ok
+test_existing_output_is_never_overwritten (test_antigravity.PackageTests.test_existing_output_is_never_overwritten) ... ok
+test_package_has_no_embedded_key_or_claude_placeholder (test_antigravity.PackageTests.test_package_has_no_embedded_key_or_claude_placeholder) ... ok
+test_rejects_missing_source_before_writing (test_antigravity.PackageTests.test_rejects_missing_source_before_writing) ... ok
+test_release_contains_only_allowlisted_files (test_antigravity.PackageTests.test_release_contains_only_allowlisted_files) ... ok
+test_release_uses_root_manifest_and_readme (test_antigravity.PackageTests.test_release_uses_root_manifest_and_readme) ... ok
+test_claude_configuration_preserved (test_antigravity.PluginContractTests.test_claude_configuration_preserved) ... ok
+test_credential_interpolation (test_antigravity.PluginContractTests.test_credential_interpolation) ... ok
+test_description_length (test_antigravity.PluginContractTests.test_description_length) ... ok
+test_names_and_version (test_antigravity.PluginContractTests.test_names_and_version) ... ok
+test_no_claude_fields_in_antigravity_manifest (test_antigravity.PluginContractTests.test_no_claude_fields_in_antigravity_manifest) ... ok
+test_remote_transport (test_antigravity.PluginContractTests.test_remote_transport) ... ok
+test_required_listing_fields (test_antigravity.PluginContractTests.test_required_listing_fields) ... ok
+test_skill_folder_matches_frontmatter (test_antigravity.PluginContractTests.test_skill_folder_matches_frontmatter) ... ok
+test_skill_has_permission_and_injection_guardrails (test_antigravity.PluginContractTests.test_skill_has_permission_and_injection_guardrails) ... ok
+test_skill_supports_both_hosts (test_antigravity.PluginContractTests.test_skill_supports_both_hosts) ... ok
+test_square_logo_and_padding (test_antigravity.PluginContractTests.test_square_logo_and_padding) ... ok
+test_starter_prompts (test_antigravity.PluginContractTests.test_starter_prompts) ... ok
+
+----------------------------------------------------------------------
+Ran 19 tests in 0.029s
+
+OK

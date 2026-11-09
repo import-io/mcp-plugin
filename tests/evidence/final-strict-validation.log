@@ -1,0 +1,7 @@
+Validating import-io-web-scraper (<ISOLATED_WORKSPACE>/release/import-io-web-scraper-0.3.0/plugin.json)
+
+  · mcp_config.json: server "import-io-web-scraper" declares variables, so the plugin is off until the user fills them in; if config.json turns it on first, the server starts with the placeholders as written
+
+  skills 1 · agents 0 · rules 0 · hooks 0 · mcpServers 1 · sidecars 0
+
+✔ Validation passed
