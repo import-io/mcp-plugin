@@ -8,9 +8,10 @@ Antigravity support is a local validation candidate, not a published release or 
 accepted Marketplace listing. Live acceptance tests passed on 2026-11-09 in
 isolated CLI and App profiles (see
 [tests/evidence/live-acceptance-2026-11-09.md](tests/evidence/live-acceptance-2026-11-09.md)).
-Formal icon approval, Google partner intake, and maintainer publication approval
-are still pending. Do not push, share, or submit this candidate without
-separate approval.
+The listing icon is approved (see
+[tests/evidence/icon-approval-2026-11-09.md](tests/evidence/icon-approval-2026-11-09.md)).
+Google partner intake confirmation is still pending. Do not submit to the
+Marketplace before that confirmation.
 
 The integration uses the existing hosted service, with an account owner's MCP key
 entered through Antigravity's credential dialog. No additional server is needed.
