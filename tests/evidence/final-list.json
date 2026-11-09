@@ -1,0 +1,15 @@
+[
+  {
+    "name": "import-io-web-scraper",
+    "enabled": false,
+    "version": "0.3.0",
+    "source": "antigravity",
+    "path": "<ISOLATED_WORKSPACE>/final-cli-home/.gemini/config/plugins/import-io-web-scraper",
+    "skills": [
+      "import-io-web-scraper"
+    ],
+    "mcpServers": [
+      "import-io-web-scraper"
+    ]
+  }
+]

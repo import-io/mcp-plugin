@@ -1,6 +1,61 @@
-# Import.io Web Scraper Claude Code Plugin
+# Import.io Web Scraper
 
-Claude Code plugin that connects Claude to the Import.io Web Scraper MCP server.
+Claude Code and Google Antigravity plugins for the hosted Import.io Web Scraper MCP server.
+
+## Antigravity — private validation candidate
+
+Antigravity support is a local validation candidate, not a published release or an
+accepted Marketplace listing. Live acceptance tests passed on 2026-11-09 in
+isolated CLI and App profiles (see
+[tests/evidence/live-acceptance-2026-11-09.md](tests/evidence/live-acceptance-2026-11-09.md)).
+Formal icon approval, Google partner intake, and maintainer publication approval
+are still pending. Do not push, share, or submit this candidate without
+separate approval.
+
+The integration uses the existing hosted service, with an account owner's MCP key
+entered through Antigravity's credential dialog. No additional server is needed.
+See [.antigravity-plugin/README.md](.antigravity-plugin/README.md) for setup and
+[docs/ANTIGRAVITY-VALIDATION.md](docs/ANTIGRAVITY-VALIDATION.md) for acceptance and
+publication gates.
+
+Build and validate the standalone bundle:
+
+```bash
+python3 scripts/package_antigravity.py
+agy plugin validate --strict ./dist/import-io-web-scraper-0.3.0
+```
+
+Install that bundle, not the shared source root. Google CLI 1.5.3 warns about
+Claude's `.mcp.json` in the shared root, which fails strict validation. The builder
+excludes Claude-only files without changing them and refuses to overwrite an
+existing build.
+
+### Offline development checks
+
+Packaging and unit tests require Python 3.9+. The separate schema check requires
+Python 3.10+ and the pinned developer dependency in `requirements-dev.txt`:
+
+```bash
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements-dev.txt
+.venv/bin/python -m unittest discover -s tests -v
+.venv/bin/python scripts/validate_antigravity.py
+```
+
+Use a fresh `HOME` and XDG configuration/cache/data directories for installation
+checks; do not use an authenticated profile. The plugin should install disabled
+until its credential is configured. These checks do not make live scraping calls.
+
+The Antigravity candidate and shared skill are version `0.3.0`; the unchanged
+Claude plugin and marketplace manifests remain version `0.2.2`.
+
+The original candidate's build evidence is retained in
+[docs/BUILD-RESULTS.md](docs/BUILD-RESULTS.md) and `tests/evidence/`.
+
+## Claude Code
+
+The existing Claude manifest, marketplace configuration, MCP configuration, and
+setup script are unchanged.
 
 ## Prerequisites
 

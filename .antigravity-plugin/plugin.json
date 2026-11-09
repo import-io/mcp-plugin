@@ -1,0 +1,21 @@
+{
+  "$schema": "https://antigravity.google/schemas/v1/plugin.json",
+  "name": "import-io-web-scraper",
+  "displayName": "Import.io Web Scraper",
+  "version": "0.3.0",
+  "description": "Extract structured data from JavaScript-rendered websites with Import.io. Navigate pages, handle pagination, and capture HTML or screenshots.",
+  "logo": "assets/importio-icon.svg",
+  "suggestedPrompts": [
+    "Use Import.io to extract the title and headings from https://example.com.",
+    "Help me plan a paginated product-data extraction with Import.io before running it.",
+    "Check whether the Import.io MCP tools are connected, without starting a scrape."
+  ],
+  "author": {
+    "name": "Import.io",
+    "url": "https://www.import.io"
+  },
+  "homepage": "https://www.import.io",
+  "repository": "https://github.com/import-io/mcp-plugin",
+  "license": "MIT",
+  "keywords": ["mcp", "web-scraping", "importio", "browser-automation", "data-extraction"]
+}
