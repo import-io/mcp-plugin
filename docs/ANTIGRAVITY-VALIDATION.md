@@ -50,6 +50,10 @@ skill, one MCP server, and a disabled state before credentials are configured.
 
 ## Live acceptance tests: authorization and account required
 
+Result (2026-11-09): all steps passed in isolated CLI and App profiles; see
+`tests/evidence/live-acceptance-2026-11-09.md`. The App version was not
+recorded and the final release build still needs strict revalidation.
+
 These tests have not passed merely because the plugin installs. Run them only
 in an authorized Antigravity test profile with permission to configure account
 access, share test URLs with Import.io, and incur any applicable service usage.

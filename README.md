@@ -5,10 +5,12 @@ Claude Code and Google Antigravity plugins for the hosted Import.io Web Scraper 
 ## Antigravity — private validation candidate
 
 Antigravity support is a local validation candidate, not a published release or an
-accepted Marketplace listing. Authentication, live extraction, restart/reconnect,
-and App/IDE behavior still need authorized testing. Icon approval and light/dark
-visual checks are also pending. Do not push, share, or submit this candidate
-without separate approval.
+accepted Marketplace listing. Live acceptance tests passed on 2026-11-09 in
+isolated CLI and App profiles (see
+[tests/evidence/live-acceptance-2026-11-09.md](tests/evidence/live-acceptance-2026-11-09.md)).
+Formal icon approval, Google partner intake, and maintainer publication approval
+are still pending. Do not push, share, or submit this candidate without
+separate approval.
 
 The integration uses the existing hosted service, with an account owner's MCP key
 entered through Antigravity's credential dialog. No additional server is needed.
